@@ -53,19 +53,3 @@ def delete_courier(courier_data):
         api.delete_courier(courier_id)
     except requests.exceptions.RequestException as e:
                 print(f"Ошибка удаления курьера: {e}")
-
-def order_data(color=''):
-    data = {
-        "firstName": "Мария",
-        "lastName": "Парф",
-        "address": "г.Москва",
-        "metroStation": "Павелецкая",
-        "phone": "+7 808 808 8888",
-        "rentTime": 5,
-        "deliveryDate": "2025-08-08",
-        "comment": "Поехали",
-    }
-    if color:
-        data["color"] = color
-
-    return data
